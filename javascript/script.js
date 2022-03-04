@@ -148,7 +148,9 @@ const randoncpuO = (num = randon) => {
   } while (player != 2);
 };
 
+console.log('Funcion o que')
 const fwinx = () => {
+  player1cont += 1;
   if (Number(veriplayerX) === 1) {
     screenwin.classList.remove("hidden");
     scordp1.innerHTML = player1cont;
@@ -852,9 +854,7 @@ bd.addEventListener("click", (e) => {
       p7.classList.add("grid__item--wino");
 
       fwinO();
-    } else if (
-      (player2tie === 5 && player1tie === 4) ||
-      (player1tie === 5 && player2tie === 4)
+    } else if (player2tie === 5 && player1tie === 4
     ) {
       screenwin.classList.remove("hidden");
       tiecont += 1;
@@ -1219,10 +1219,7 @@ nextround.addEventListener("click", () => {
 
   player = 1;
   if (Number(veriplayerO) === 2) {
-    // randoncpuO(randon);
-    window.onload = setTimeout(function () {
-      return randoncpuO(randon);
-    }, 800);
+    setTimeout(function () {return randoncpuO(randon);}, 800);
   }
 });
 
