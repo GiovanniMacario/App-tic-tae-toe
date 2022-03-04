@@ -148,7 +148,6 @@ const randoncpuO = (num = randon) => {
   } while (player != 2);
 };
 
-console.log('Funcion o que')
 const fwinx = () => {
   player1cont += 1;
   if (Number(veriplayerX) === 1) {
