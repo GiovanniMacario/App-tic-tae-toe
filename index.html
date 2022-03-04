@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>TIC TAC TOE</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="contain">
+        <div class="contain__top">
+          <img src="assets/icons/logo.svg" alt="icon logo " />
+        </div>
+        <div class="contain__midle">
+          <p class="contain__text">PICK PLAYER 1'S MARK (ONLY VS CPU)</p>
+          <div class="midle__player">
+            <div class="midle__playerx" id="selecX">
+              <img src="assets/icons/icon-x.svg" alt="icon x" class="img" />
+            </div>
+            <div class="midle__player0" id="selecO">
+              <img src="assets/icons/icon-o.svg" alt="icon 0" class="img" />
+            </div>
+          </div>
+          <p class="contain__text">REMEMBER: X GOES FIRST</p>
+        </div>
+        <div class="contain__bottom">
+          <a href="pvscpu.html" class="button1">NEW GAME (VS CPU)</a>
+          <a href="pvp.html" class="button2">NEW GAME (VS PLAYER)</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- 
+    <a href="#" class="button1">BUTTON 1</a>
+    <a href="#" class="button2">BUTTON 2</a>
+    <a href="#" class="buttonsecond1">SECONDARY BUTTON 1</a>
+    <a href="#" class="buttonsecond2">SECONDARY BUTTON 2</a>
+    <a href="#" class="buttonrestar">
+        <img src="assets/icons/icon-restart.svg" alt="icon again" width="15px" height="15px">
+    </a> -->
+
+    <script src="javascript/menu.js"></script>
+  </body>
+</html>

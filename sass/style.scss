@@ -1,0 +1,288 @@
+@use "index";
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+%flex{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  @extend %flex;
+  background-color: index.$color5;
+}
+
+.contain {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 1em;
+
+  &__midle {
+    padding: 0.5em 1em;
+    background-color: index.$color6;
+    color: index.$color-white;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
+.contain__text {
+  font-size: 14px;
+  letter-spacing: 0.8px;
+}
+
+.midle__player {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  background-color: index.$color5;
+  padding: 0.3em;
+}
+.midle__playerx,
+.midle__player0 {
+  border-radius: 10px;
+  padding: 0.5em 4em;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.4s ease-in-out;
+}
+
+.contain__bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.selecX__bg{
+  background-color: index.$color1;
+}
+
+.selecO__bg{
+  background-color: index.$color3;
+}
+
+.img {
+  width: 2em;
+  height: 2em;
+  filter: grayscale(100%);
+}
+
+
+.board{
+    padding: 1em;
+
+    &__top{
+        @extend %flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+    &__item{
+      @extend %flex;
+        cursor: pointer;
+        width: 5em;
+        height: 5em;
+        padding: 1em;
+        border-radius: 10px;
+        background-color: index.$color6;
+        box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, .5);
+    }
+}
+
+.grid__item--winx{
+  background-color: index.$color2;
+
+}
+
+
+
+.icon-grid{
+  position: relative;
+    width: 2.8em;
+    height: 2.8em;
+}
+
+.icon-gridhover{
+  position: absolute;
+  width: 2.8em;
+  height: 2.8em;
+
+}
+.iconXgridhover{
+  position: absolute;
+  width: 2.8em;
+  height: 2.8em;
+  transition: 0.4s ease-in-out;
+
+}
+
+.iconOgridhover{
+  position: absolute;
+  width: 2.8em;
+  height: 2.8em;
+  transition: 0.4s ease-in-out;
+}
+
+
+.icon-grid2{
+    width: 2.8em;
+    height: 2.8em;
+}
+
+.buttonturn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: index.$color-white;
+}
+
+.icon-boardtop{
+    width: 20px;
+    height: 20px;
+    filter: grayscale(100%);
+
+}
+
+.board__bottom{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    gap: 5px;
+}
+
+.screenWin{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 2;
+  display: flex;
+  @extend %flex;
+
+  &__text{
+    color: index.$color-white;
+  }
+
+  &__contain{
+    padding: 1em;
+    width: 100%;
+    background-color: index.$color6;
+    text-align: center;
+  }
+
+  &__midle{
+    @extend %flex;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    color: index.$color-white;
+  }
+
+}
+
+
+.screeWin__buttons{
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.screenWin__textm--p1{
+  color: index.$color1;
+}
+
+.screenWin__textm--p2{
+  color: index.$color4;
+}
+
+
+
+.screenWin__icon{
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.iconwinx{  
+  position: absolute;
+  width: 2.8em;
+  height: 2.8em;
+  z-index: 2;
+
+}
+.iconwino{  
+  position: absolute;
+  width: 2.8em;
+  height: 2.8em;
+  z-index: 2;
+
+}
+
+.grid__item--winx{
+  background-color: index.$color2;
+  
+}
+
+.grid__item--wino{
+  background-color: index.$color4;
+}
+
+.hidden{
+  display:none;
+  z-index: 2;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .midle__playerx:hover:not(.selecX__bg),
+  .midle__player0:hover:not(.selecO__bg) {
+    background-color: white;
+  }
+
+  .button1:hover {
+    background-color: index.$color4;
+  }
+
+  .button2:hover {
+    background-color: index.$color2;
+  }
+}
+
+@media screen and(min-width:350px) and (max-width: 750px) {
+  .contain {
+    width: 90%;
+  }
+  .board{
+    width: 90%;
+    max-width: 350px;
+    justify-content: space-around;
+  }
+  
+ .grid__item{
+   width: 4em;
+   height: 4em;
+ }
+
+.board__top{
+  justify-content: space-around;
+}
+
+}

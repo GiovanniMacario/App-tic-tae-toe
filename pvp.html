@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>TIC TAC TOE</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="board">
+        <div class="board__top">
+          <div class="board__toplogo">
+            <img src="assets/icons/logo.svg" alt="icon logo " />
+          </div>
+
+          <div class="buttonturn">
+            <div id="turn">
+              <img
+                src="assets/icons/icon-x.svg"
+                alt="icon x"
+                class="icon-boardtop"
+                id="turnx"
+              />
+              <img
+                src="assets/icons/icon-o.svg"
+                alt="icon x"
+                class="icon-boardtop hidden"
+                id="turno"
+              />
+            </div>
+            <span class="buttonturn__text">TURN</span>
+          </div>
+
+          <div class="board__topbutton2" id="restar">
+            <a href="#" class="buttonrestar">
+              <img
+                src="assets/icons/icon-restart.svg"
+                alt="icon again"
+                class="icon-boardtop"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="grid" id="board">
+          <div class="grid__item" id="position1">
+            <img src="assets/icons/icon-x copy.svg" alt="icon-x-win" class="iconwinx hidden" id="xwin1">
+            <img src="assets/icons/icon-o-win.svg" alt="icon-x-win" class="iconwino hidden" id="owin1">
+            <img
+              src="assets/icons/icon-x-outline.svg"
+              alt="icon x"
+              class="iconXgridhover  hidden"
+              id="iconXhover"
+            />
+            <img
+              src="assets/icons/icon-o-outline.svg"
+              alt="icon x"
+              class="iconOgridhover hidden "
+              id="iconOhover"
+            />
+          </div>
+          <div class="grid__item" id="position2">
+            <img src="assets/icons/icon-x copy.svg" alt="icon-x-win" class="iconwinx hidden" id="xwin2">
+            <img src="assets/icons/icon-o-win.svg" alt="icon-x-win" class="iconwinx hidden" id="owin2">
+
+            <img
+            src="assets/icons/icon-x-outline.svg"
+            alt="icon x"
+            class="iconXgridhover hidden "
+            id="iconX2hover"
+          />
+          <img
+            src="assets/icons/icon-o-outline.svg"
+            alt="icon x"
+            class="iconOgridhover hidden "
+            id="iconO2hover"
+          />
+          </div>
+          <div class="grid__item" id="position3">
+            <img src="assets/icons/icon-x copy.svg" alt="icon-x-win" class="iconwinx hidden" id="xwin3">
+            <img src="assets/icons/icon-o-win.svg" alt="icon-x-win" class="iconwinx hidden" id="owin3">
+            <img
+            src="assets/icons/icon-x-outline.svg"
+            alt="icon x"
+            class="iconXgridhover hidden "
+            id="iconX3hover"
+          />
+          <img
+            src="assets/icons/icon-o-outline.svg"
+            alt="icon x"
+            class="iconOgridhover hidden "
+            id="iconO3hover"
+          />
+          </div>
+          <div class="grid__item" id="position4">
+            <img src="assets/icons/icon-x copy.svg" alt="icon-x-win" class="iconwinx hidden" id="xwin4">
+            <img src="assets/icons/icon-o-win.svg" alt="icon-x-win" class="iconwinx hidden" id="owin4">
+            <img
+            src="assets/icons/icon-x-outline.svg"
+            alt="icon x"
+            class="iconXgridhover hidden "
+            id="iconX4hover"
+          />
+          <img
+            src="assets/icons/icon-o-outline.svg"
+            alt="icon x"
+            class="iconOgridhover hidden "
+            id="iconO4hover"
+          />
+          </div>
+          <div class="grid__item" id="position5">
+            <img src="assets/icons/icon-x copy.svg" alt="icon-x-win" class="iconwinx hidden" id="xwin5">
+            <img src="assets/icons/icon-o-win.svg" alt="icon-x-win" class="iconwinx hidden" id="owin5">
+            <img
+            src="assets/icons/icon-x-outline.svg"
+            alt="icon x"
+            class="iconXgridhover hidden "
+            id="iconX5hover"
+          />
+          <img
+            src="assets/icons/icon-o-outline.svg"
+            alt="icon x"
+            class="iconOgridhover hidden "
+            id="iconO5hover"
+          />
+          </div>
+          <div class="grid__item" id="position6">
+            <img src="assets/icons/icon-x copy.svg" alt="icon-x-win" class="iconwinx hidden" id="xwin6">
+            <img src="assets/icons/icon-o-win.svg" alt="icon-x-win" class="iconwinx hidden" id="owin6">
+            <img
+            src="assets/icons/icon-x-outline.svg"
+            alt="icon x"
+            class="iconXgridhover hidden "
+            id="iconX6hover"
+          />
+          <img
+            src="assets/icons/icon-o-outline.svg"
+            alt="icon x"
+            class="iconOgridhover hidden "
+            id="iconO6hover"
+          />
+          </div>
+          <div class="grid__item" id="position7">
+            <img src="assets/icons/icon-x copy.svg" alt="icon-x-win" class="iconwinx hidden" id="xwin7">
+            <img src="assets/icons/icon-o-win.svg" alt="icon-x-win" class="iconwinx hidden" id="owin7">
+            <img
+            src="assets/icons/icon-x-outline.svg"
+            alt="icon x"
+            class="iconXgridhover hidden "
+            id="iconX7hover"
+          />
+          <img
+            src="assets/icons/icon-o-outline.svg"
+            alt="icon x"
+            class="iconOgridhover hidden "
+            id="iconO7hover"
+          />
+          </div>
+          <div class="grid__item" id="position8">
+            <img src="assets/icons/icon-x copy.svg" alt="icon-x-win" class="iconwinx hidden" id="xwin8">
+            <img src="assets/icons/icon-o-win.svg" alt="icon-x-win" class="iconwinx hidden" id="owin8">
+            <img
+            src="assets/icons/icon-x-outline.svg"
+            alt="icon x"
+            class="iconXgridhover hidden "
+            id="iconX8hover"
+          />
+          <img
+            src="assets/icons/icon-o-outline.svg"
+            alt="icon x"
+            class="iconOgridhover hidden "
+            id="iconO8hover"
+          />
+          </div>
+          <div class="grid__item" id="position9">
+            <img src="assets/icons/icon-x copy.svg" alt="icon-x-win" class="iconwinx hidden" id="xwin9">
+            <img src="assets/icons/icon-o-win.svg" alt="icon-x-win" class="iconwinx hidden" id="owin9">
+            <img
+            src="assets/icons/icon-x-outline.svg"
+            alt="icon x"
+            class="iconXgridhover hidden "
+            id="iconX9hover"
+          />
+          <img
+            src="assets/icons/icon-o-outline.svg"
+            alt="icon x"
+            class="iconOgridhover hidden "
+            id="iconO9hover"
+          />
+          </div>
+        </div>
+
+        <div class="board__bottom">
+          <div class="buttoninfo__text1">
+            <span class="buttoninfo__title">X</span>
+            <div class="buttoninfo__number" id="player1">0</div>
+          </div>
+
+          <div class="buttoninfo__ties">
+            <span class="buttoninfo__title">TIES</span>
+            <div class="buttoninfo__number" id="ties">0</div>
+          </div>
+
+          <div class="buttoninfo__text2">
+            <span class="buttoninfo__title">O</span>
+            <div class="buttoninfo__number" id="player2">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="screenWin hidden" id="win">
+        <div class="screenWin__contain">
+          <p class="screenWin__text" id="textwin"></p>
+          <div class="screenWin__midle">
+            <img
+              src="assets/icons/icon-o.svg"
+              alt="icon o"
+              class="screenWin__icon"
+              id="screenicono"
+            />
+            <img
+              src="assets/icons/icon-x.svg"
+              alt="icon o"
+              class="screenWin__icon hidden"
+              id="screeniconx"
+            />
+            <p id="textround">TAKES THE ROUND</p>
+          </div>
+          <div class="screeWin__buttons">
+            <a href="index.html" class="buttonquit">QUIT</a>
+            <a href="#" class="buttonnext" id="round">NEXT ROUND</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="screenWin hidden" id="screenrestar">
+        <div class="screenWin__contain">
+          <div class="screenWin__midle">
+            <p>RESTAR GAME?</p>
+          </div>
+          <div class="screeWin__buttons">
+            <a href="#" class="buttonquit" id="cancelrestar">NO, CANCEL</a>
+            <a href="pvp.html" class="buttonnext">YES, RESTAR</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="javascript/script_pvp.js"></script>
+  </body>
+</html>

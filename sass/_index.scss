@@ -1,0 +1,74 @@
+@forward  'vars/colors';
+@forward  'vars/fonts';
+@use 'vars/colors';
+@use  'buttons/button';
+
+
+
+
+.button1{
+    @include button.buttonGeneral(colors.$color3);
+    box-shadow: 0 5px 0 1px colors.$box-shadow-3;
+}
+.button2{
+    @include button.buttonGeneral(colors.$color1);
+    box-shadow: 0 5px 0 1px colors.$box-shadow-1;
+}
+
+.buttonsecond1{
+    @include button.buttonGeneral(colors.$color4);
+    font-size: 13px;
+}
+
+.buttonsecond2{
+    @include button.buttonGeneral(colors.$color8);
+    font-size: 13px;
+}
+
+.buttonrestar{
+    @include button.buttonGeneral(colors.$color8);
+    padding: 0.5em 1em;
+    box-shadow: 0 3px 0 1px hsla(198,23%,72%,.5)
+
+}
+
+.buttonquit{
+    @include button.buttonGeneral(colors.$color7);
+    padding: 1em ;
+    font-size: 16px;
+    box-shadow: 0 2px 0 1px hsla(198,23%,72%,.5)
+}
+.buttonnext{
+    @include button.buttonGeneral(colors.$color3);
+    padding:1em ;
+    font-size: 16px;
+    box-shadow: 0 2px 0 1px colors.$box-shadow-3;
+
+}
+
+
+.buttonturn{
+    @include button.buttonGeneral(colors.$color6);
+    padding: 1em ;
+    box-shadow: 0 5px 0 1px rgba(0,0,0,.5);
+
+}
+
+.buttoninfo__text1{
+    @include button.buttonGeneral(colors.$color1);
+    padding: 0.5em 2.5em;
+    font-size: 16px;
+}
+.buttoninfo__ties{
+    @include button.buttonGeneral(colors.$color-white);
+    padding: 0.5em 2.5em;
+    font-size: 16px;
+    letter-spacing: normal
+
+}
+.buttoninfo__text2{
+    @include button.buttonGeneral(colors.$color3);
+    padding: 0.5em 2.5em;
+    font-size: 16px;
+
+}
